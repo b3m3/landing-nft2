@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: 100%;
   height: 3px;
-  background-color: #1F1534;
+  background-color: #ffffff;
   border-radius: 6px;
   transition: 0.3s ease-in-out;
 }
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .burger span:nth-child(3) {
   bottom: 0;
-  background-color: #1F1534;
+  background-color: #ffffff;
 }
 .burger.active span:nth-child(1) {
   top: 50%;
@@ -159,6 +159,112 @@ h1, h2, h3, h4, h5, h6 {
   .menu.show-menu .menu__list {
     right: 0;
   }
+}
+
+@font-face {
+  font-family: "icomoon";
+  font-display: swap;
+  src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Maragsa";
+  font-display: swap;
+  src: url("../fonts/Maragsa.woff2") format("woff2"), url("../fonts/Maragsa.woff") format("woff"), url("../fonts/Maragsa.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Misto";
+  font-display: swap;
+  src: url("../fonts/Misto.woff2") format("woff2"), url("../fonts/Misto.woff") format("woff"), url("../fonts/Misto.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  font-display: swap;
+  src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff"), url("../fonts/Raleway-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  font-display: swap;
+  src: url("../fonts/Raleway-Medium.woff2") format("woff2"), url("../fonts/Raleway-Medium.woff") format("woff"), url("../fonts/Raleway-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  font-display: swap;
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff"), url("../fonts/Raleway-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  font-display: swap;
+  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway-SemiBold.woff") format("woff"), url("../fonts/Raleway-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbanist";
+  font-display: swap;
+  src: url("../fonts/Urbanist-Regular.woff2") format("woff2"), url("../fonts/Urbanist-Regular.woff") format("woff"), url("../fonts/Urbanist-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?wkzcr");
+  src: url("../fonts/icomoon.eot?wkzcr#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff?wkzcr") format("woff"), url("../fonts/icomoon.svg?wkzcr#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ICON CLASS */
+.icon-arrow-right-top:before {
+  content: "\e900";
+  color: #fff;
+}
+
+.icon-arrow-left:before {
+  content: "\e902";
+  color: #fff;
+}
+
+.icon-arrow-right:before {
+  content: "\e903";
+  color: #fff;
+}
+
+.icon-logo:before {
+  content: "\e904";
+  color: #fff;
+}
+
+.icon-star:before {
+  content: "\e905";
+  color: #fff;
+}
+
+.icon-search:before {
+  content: "\e901";
+  color: #fff;
 }
 
 /* settings */
@@ -243,9 +349,85 @@ body {
 }
 .btn:hover {
   border: none;
+  border: 1px solid #005AAA;
   background-color: #005AAA;
 }
 
 /* ======== sections ======== */
 /* header */
+.header__main {
+  padding-top: 64px;
+  display: grid;
+  align-items: center;
+  gap: 1.25rem;
+  grid-template: minmax(2.75rem, 1fr)/auto 1fr auto;
+}
+@media (max-width: 1280px) {
+  .header__main {
+    padding-top: calc(0px + 64 * ((100vw - 320px) / 960));
+  }
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Misto";
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  color: #fff;
+}
+.header__menu {
+  padding-right: 177px;
+  justify-self: end;
+}
+@media (max-width: 1280px) {
+  .header__menu {
+    padding-right: calc(0px + 177 * ((100vw - 320px) / 960));
+  }
+}
+@media (max-width: 1024px) {
+  .header__menu {
+    justify-self: center;
+    padding-right: 0;
+  }
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  grid-column-gap: 80px;
+}
+@media (max-width: 1280px) {
+  .menu__list {
+    grid-column-gap: calc(20px + 60 * ((100vw - 320px) / 960));
+  }
+}
+@media (max-width: 1024px) {
+  .menu__list {
+    grid-column-gap: 40px;
+  }
+}
+@media (max-width: 1024px) and (max-width: 1280px) {
+  .menu__list {
+    grid-column-gap: calc(20px + 20 * ((100vw - 320px) / 960));
+  }
+}
+.menu__link {
+  display: block;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #fff;
+  transition: 0.3s ease;
+}
+.menu__link:hover {
+  color: #005AAA;
+}
+
+.button-header__btn {
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+}
+
 /* footer */

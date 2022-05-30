@@ -1,0 +1,57 @@
+.header {
+  &__wrapp {}
+  &__main {
+    @include fit('padding-top', 64, 0, 1);
+    display: grid;
+    align-items: center;
+    gap: rem(20);
+    grid-template: minmax(rem(44), 1fr) / auto 1fr auto;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+
+    font-family: "Misto";
+    font-weight: 400;
+    font-size: rem(36);
+    line-height: rem(44);
+    color: #fff;
+  }
+  &__menu {
+    @include fit('padding-right', 177, 0, 1);
+    justify-self: end;
+    @include laptop {
+      justify-self: center;
+      padding-right: 0;
+    }
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    @include fit('grid-column-gap', 80, 20, 1);
+    @include laptop {@include fit('grid-column-gap', 40, 20, 1);}
+  }
+  &__link {
+    display: block;
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: rem(28);
+    color: #fff;
+    transition: .3s ease;
+    
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.button-header {
+  &__btn {
+    white-space: nowrap;
+    padding: rem(8) rem(16);
+  }
+}
