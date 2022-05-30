@@ -1,0 +1,96 @@
+.footer {
+  &__main {
+    @include fit('padding-top', 160, 50, 1);
+    @include fit('padding-bottom', 154, 50, 1);
+    display: grid;
+    grid-column-gap: rem(20);
+    @include fit('grid-row-gap', 60, 30, 1);
+    grid-template: auto / minmax(auto, rem(423)) minmax(auto, rem(223)) minmax(auto, rem(286)) minmax(auto, rem(335));
+
+    @include laptop {grid-template: 1fr 1fr / 1fr 1fr;}
+    @include mq(rem(550)) {
+      grid-template: auto auto auto auto / 1fr;
+    }
+  }
+  &__title {
+    font-family: 'Maragsa';
+    font-weight: 400;
+    font-size: rem(36);
+    line-height: rem(45);
+    color: #FCFCFD;
+    @include mq(rem(550)) {& br {display: none;}}
+  }
+  &__subtitle {
+    @include fit('padding-bottom', 60, 20, 1);
+    font-size: rem(18);
+    line-height: rem(21);
+    color: #FCFCFD;
+  }
+}
+
+.menu-footer {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(15);
+  }
+  &__link {
+    font-family: 'Urbanist';
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: rem(19);
+    color: rgba(252, 252, 253, 0.5);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.form-footer {
+  &__text {
+    font-size: rem(16);
+    line-height: 150%;
+    color: #FCFCFD;
+  }
+  &__row {
+    margin-top: rem(32);
+    border: 1px solid #E5E5E5;
+    border-radius: rem(100);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(10);
+    height: rem(48);
+    padding: 0 rem(22);
+  }
+  &__input {
+    background-color: transparent;
+    font-size: rem(16);
+    line-height: rem(19);
+    color: #FCFCFD;
+    &::placeholder {color: #FCFCFD;}
+  }
+  &__button {
+    position: relative;
+    min-width: rem(24);
+    min-height: rem(24);
+    background-color: #FCFCFD;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+
+    &::before {
+      position: absolute;
+      content: '';
+      @include arrow(right, #000, 2px, 3px);
+    }
+
+    &:hover {
+      background-color: $blue;
+    }
+  }
+}
