@@ -43,8 +43,10 @@
     color: #fff;
     transition: .3s ease;
     
-    &:hover {
-      color: $blue;
+    @media(min-width: rem(768)) {
+      &:hover {
+        color: $blue;
+      }
     }
   }
 }
@@ -53,5 +55,11 @@
   &__btn {
     white-space: nowrap;
     padding: rem(8) rem(16);
+    @include tablet {
+      font-weight: 500;
+      border: 1px solid #fff;
+      background-color: #fff;
+      color: $blue;
+    }
   }
 }

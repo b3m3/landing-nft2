@@ -124,9 +124,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     width: 100%;
     padding: 0;
-    background-color: rgba(182, 182, 182, 0.4);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    background-color: rgba(26, 26, 26, 0.8);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -145,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 1.25rem;
-    background-color: #458FF6;
+    background: linear-gradient(#005AAA, #0d7bdb);
     transition: 0.6s ease;
   }
   .menu .menu__link {
@@ -421,13 +419,23 @@ body {
   color: #fff;
   transition: 0.3s ease;
 }
-.menu__link:hover {
-  color: #005AAA;
+@media (min-width: 48rem) {
+  .menu__link:hover {
+    color: #005AAA;
+  }
 }
 
 .button-header__btn {
   white-space: nowrap;
   padding: 0.5rem 1rem;
+}
+@media (max-width: 767px) {
+  .button-header__btn {
+    font-weight: 500;
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #005AAA;
+  }
 }
 
 /* footer */
