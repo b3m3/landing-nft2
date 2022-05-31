@@ -87,10 +87,14 @@
       position: absolute;
       content: '';
       @include arrow(right, #000, 2px, 3px);
+      transition: .3s ease;
     }
 
     &:hover {
       background-color: $blue;
+      &::before {
+        @include arrow(right, #fff, 2px, 3px);
+      }
     }
   }
 }

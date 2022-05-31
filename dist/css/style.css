@@ -174,17 +174,17 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 @font-face {
-  font-family: "Raleway";
-  font-display: swap;
-  src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff"), url("../fonts/Raleway-Bold.ttf") format("ttf");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
   font-family: "Misto";
   font-display: swap;
   src: url("../fonts/Misto.woff2") format("woff2"), url("../fonts/Misto.woff") format("woff"), url("../fonts/Misto.ttf") format("ttf");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  font-display: swap;
+  src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff"), url("../fonts/Raleway-Bold.ttf") format("ttf");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
@@ -197,15 +197,15 @@ h1, h2, h3, h4, h5, h6 {
 @font-face {
   font-family: "Raleway";
   font-display: swap;
-  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff"), url("../fonts/Raleway-Regular.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway-SemiBold.woff") format("woff"), url("../fonts/Raleway-SemiBold.ttf") format("ttf");
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Raleway";
   font-display: swap;
-  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway-SemiBold.woff") format("woff"), url("../fonts/Raleway-SemiBold.ttf") format("ttf");
-  font-weight: 600;
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff"), url("../fonts/Raleway-Regular.ttf") format("ttf");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -1112,15 +1112,36 @@ body {
 }
 @media (max-width: 1280px) {
   .info-deals__label {
-    font-size: calc(16px + 2 * ((100vw - 320px) / 960));
+    font-size: calc(14px + 4 * ((100vw - 320px) / 960));
+  }
+}
+.info-deals__label_time {
+  padding-top: 47px;
+}
+@media (max-width: 1280px) {
+  .info-deals__label_time {
+    padding-top: calc(13px + 34 * ((100vw - 320px) / 960));
   }
 }
 .info-deals__box {
   display: flex;
-  gap: 0.75rem;
+  gap: 12px;
+}
+@media (max-width: 1280px) {
+  .info-deals__box {
+    gap: calc(5px + 7 * ((100vw - 320px) / 960));
+  }
 }
 .info-deals__number {
   font-weight: 700;
+}
+.info-deals__number_width {
+  width: 80px;
+}
+@media (max-width: 1280px) {
+  .info-deals__number_width {
+    width: calc(33px + 47 * ((100vw - 320px) / 960));
+  }
 }
 
 /* footer */
@@ -1241,7 +1262,15 @@ body {
   display: inline-block;
   padding: 3px;
   transform: rotate(-45deg);
+  transition: 0.3s ease;
 }
 .form-footer__button:hover {
   background-color: #005AAA;
+}
+.form-footer__button:hover::before {
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
 }

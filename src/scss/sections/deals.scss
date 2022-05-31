@@ -60,14 +60,20 @@
   }
   &__label {
     font-weight: 400;
-    @include fit('font-size', 18, 16, 1);
+    @include fit('font-size', 18, 14, 1);
     line-height: 130.4%;
+    &_time {
+      @include fit('padding-top', 47, 13, 1);
+    }
   }
   &__box {
     display: flex;
-    gap: rem(12);
+    @include fit('gap', 12, 5, 1);
   }
   &__number {
     font-weight: 700;
+    &_width {
+      @include fit('width', 80, 33, 1);
+    }
   }
 }
