@@ -1,0 +1,73 @@
+.deals {
+  @include fit('margin-top', 80, 50, 1);
+  position: relative;
+  overflow: hidden;
+  min-height: rem(600);
+  &__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    object-fit: cover;
+
+    @include laptop {margin: 0 0 0 rem(-15);}
+  }
+  &__info {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+    display: grid;
+    grid-template: minmax(rem(223), auto) / minmax(auto, rem(577)) minmax(auto, rem(223));
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+
+    @include tablet {
+      grid-template: auto auto / 1fr;
+      left: 0;
+    }
+  }
+}
+
+.info-deals {
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    height: 100%;
+    @include fit('padding', 24, 10, 1);
+    &:last-child {background: rgba(255, 255, 255, 0.2);}
+  }
+  &__row {
+    &:first-child {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      gap: rem(8);
+
+      @include tablet {
+        flex: unset;
+      }
+    }
+    &:last-child {
+      display: flex;
+      @include fit('gap', 32, 15, 1);
+    }
+  }
+  &__text {
+    font-weight: 700;
+    letter-spacing: 0.16em;
+  }
+  &__label {
+    font-weight: 400;
+    @include fit('font-size', 18, 16, 1);
+    line-height: 130.4%;
+  }
+  &__box {
+    display: flex;
+    gap: rem(12);
+  }
+  &__number {
+    font-weight: 700;
+  }
+}
