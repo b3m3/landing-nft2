@@ -524,8 +524,13 @@ body {
 
 .text {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 130.4%;
+}
+@media (max-width: 1280px) {
+  .text {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 960));
+  }
 }
 
 .btn {

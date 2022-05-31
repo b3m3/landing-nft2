@@ -29,7 +29,7 @@
 
 .text {
   font-weight: 400;
-  font-size: rem(24);
+  @include fit('font-size', 24, 18, 1);
   line-height: 130.4%;
 }
 
