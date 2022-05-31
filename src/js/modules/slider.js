@@ -1,9 +1,11 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Parallax } from 'swiper';
 
 const slider = () => {
-  const swiper = new Swiper('.swiper', {
-    modules: [Navigation, Pagination],
+  const swiperIntro = new Swiper('.slider-intro', {
+    modules: [Navigation, Pagination, Parallax],
     loop: true,
+    speed: 600,
+    parallax: true,
     slidesPerView: 1,
     navigation: {
       nextEl: '.next-slide',
@@ -16,6 +18,19 @@ const slider = () => {
         spaceBetween: 40
       },
     }
+  });
+
+  const swiperTrending = new Swiper('.slider-trending', {
+    modules: [Navigation, Pagination, Parallax],
+    loop: true,
+    speed: 600,
+    parallax: true,
+    spaceBetween: 24,
+    slidesPerView: 'auto',
+    navigation: {
+      nextEl: '.header-trending__arrows-next',
+      prevEl: '.header-trending__arrows-prev'
+    },
   });
 };
 

@@ -2,9 +2,33 @@
 
 /* ICON CLASS */
 
-.icon-arrow-right-top:before {content: "\e900";color: #fff;font-size: 45px;font-weight: 600;}
-.icon-arrow-left:before {content: "\e902";color: #fff;font-size: 45px;font-weight: 600;}
-.icon-arrow-right:before {content: "\e903";color: #fff;font-size: 45px;font-weight: 600;}
+.icon-arrow-right-top:before {
+  content: "\e900";
+  cursor: pointer;
+  color: #fff;
+  font-size: 45px;
+  font-weight: 600;
+  @include fit('font-size', 70, 30, 1);
+  transition: .3s ease;
+}
+.icon-arrow-left:before {
+  content: "\e902";
+  cursor: pointer;
+  color: #fff;
+  font-size: 45px;
+  font-weight: 600;
+  @include fit('font-size', 70, 30, 1);
+  transition: .3s ease;
+}
+.icon-arrow-right:before {
+  content: "\e903";
+  cursor: pointer;
+  color: #fff;
+  font-size: 45px;
+  font-weight: 600;
+  @include fit('font-size', 70, 30, 1);
+  transition: .3s ease;
+}
 .icon-logo:before {content: "\e904";color: #fff;}
 .icon-star:before {content: "\e905";color: #fff;}
 .icon-search:before {content: "\e901";color: #fff;}

@@ -13,16 +13,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: .3s ease;
   }
 }
 
 .title {
-  @include fit('font-size', 64, 36, 1);
+  @include fit('font-size', 64, 26, 1);
   line-height: 130.4%;
 }
 
 .subtitle {
-  @include fit('font-size', 36, 28, 1);
+  @include fit('font-size', 36, 20, 1);
   line-height: 130.4%;
 }
 
@@ -51,5 +52,30 @@
       border: 1px solid $blue;
       background-color: $blue;
     }
+  }
+}
+
+.view-all {
+  @include pc {
+    &:hover {
+      .view-all__name {
+        color: $blue;
+      }
+      .view-all__icon::before {
+        color: $blue;
+      }
+    }
+  }
+  &__name {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    gap: rem(10);
+    color: #fff;
+    font-weight: 400;
+    transition: .3s ease;
+  }
+  &__icon::before {
+    transition: .3s ease;
   }
 }
