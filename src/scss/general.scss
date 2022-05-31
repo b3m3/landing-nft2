@@ -45,9 +45,11 @@
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
 
-  &:hover {
-    border: none;
-    border: 1px solid $blue;
-    background-color: $blue;
+  @include pc {
+    &:hover {
+      border: none;
+      border: 1px solid $blue;
+      background-color: $blue;
+    }
   }
 }

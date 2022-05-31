@@ -1,0 +1,178 @@
+.intro {
+  overflow: hidden;
+  &__main {
+    @include fit('padding-top', 90, 50, 1);
+    display: grid;
+    grid-row-gap: rem(30);
+    grid-template: minmax(rem(627), auto) / auto minmax(rem(410), auto);
+
+    @include laptop {grid-column-gap: rem(20);}
+    @include mq(rem(875)) {grid-template: auto  minmax(rem(400), auto) / 1fr;}
+  }
+  &__info {
+    position: relative;
+    margin-right: rem(-86);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: rem(20);
+    height: 100%;
+
+    &::before {
+      position: absolute;
+      z-index: 2;
+      content: '';
+      width: 1000%;
+      height: calc(100% + rem(20));
+      top: rem(-10);
+      left: calc(-900% - rem(85));
+      background-color: $bg;
+
+      @include laptop {
+        width: calc(100% + rem(30));
+        left: rem(-20);
+      }
+    }
+
+    @include laptop {margin-right: 0; align-items: center;}
+  }
+  &__slider {
+    width: 100%;
+    overflow: visible;
+    max-width: rem(410);
+    @include mq(rem(475)) {max-width: rem(290);}
+  }
+}
+
+.info-intro {
+  &__title {
+    position: relative;
+    pointer-events: none;
+    z-index: 5;
+    font-family: 'Misto';
+    font-weight: 400;
+    @include fit('font-size', 100, 42, 1);
+    line-height: 130.4%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    text-align: right;
+
+    & h2:last-child {
+      display: flex;
+      align-items: center;
+      @include laptop {display: block;}
+    }
+
+    & i {
+      flex: 1 1 auto;
+      border: 1px solid #000;
+      max-width: rem(224);
+      height: 6px;
+      background-color: #fff;
+      @include fit('margin-right', 67, 20, 1);
+      @include laptop {display: none;}
+    }
+
+    & span {
+      color: #000;
+      @include laptop {color: #fff;}
+    }
+
+    @include laptop {text-align: center;}
+  }
+  &__btn {
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+    background: #D3FE29;
+    border-radius: rem(100);
+    border: none;
+    padding: rem(14) rem(69);
+    color: $bg;
+
+    @include pc {
+      &:hover {
+        border: none;
+        color: #fff;
+      }
+    }
+  }
+  &__row {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: rem(24);
+
+    @include fit('margin-top', 117, 0, 1);
+    @include mq(rem(475)) {flex-direction: column;}
+  }
+  &__images {
+    display: flex;
+    align-items: center;
+    & img {
+      width: rem(70);
+      height: rem(70);
+      border-radius: 50%;
+      border: 3px solid #fff;
+      transition: .3s ease;
+
+      &:nth-child(2), &:nth-child(3) {margin-left: rem(-24);}
+      &:hover{transform: translateY(rem(-10));}
+    }
+  }
+  &__text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: start;
+    gap: rem(26);
+  }
+}
+
+.slider-intro {
+  &__wrapp {
+    height: 100%;
+  }
+  &__item {
+    position: relative;
+    height: 100%;
+  }
+  &__item-img {
+    height: 100%;
+    display: block;
+    overflow: hidden;
+
+    & img {
+      transition: .3s ease-out;
+
+      @include pc{
+        &:hover {
+          transform: scale(1.045);
+        }
+      }
+
+    }
+
+  }
+  &__item-subtitle {
+    cursor: pointer;
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: rem(39);
+    height: rem(79);
+    left: 0;
+    bottom: 0;
+    padding: 0 rem(16);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+
+    & span {
+      transition: .3s ease-out;
+    }
+
+    @include pc{&:hover {& span {transform: translate(rem(7));}}}
+  }
+}
