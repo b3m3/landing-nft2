@@ -17,6 +17,18 @@
     font-size: rem(36);
     line-height: rem(44);
     color: #fff;
+
+    @include pc {
+      &:hover {
+        & span {
+          animation: logo 2s linear infinite;
+
+          &::before {
+            color: $blue;
+          }
+        }
+      }
+    }
   }
   &__menu {
     @include fit('padding-right', 177, 0, 1);
