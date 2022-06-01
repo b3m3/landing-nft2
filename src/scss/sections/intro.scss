@@ -1,6 +1,33 @@
 .intro {
-  overflow: hidden;
-  
+  position: relative;
+
+  &::before {
+    position: absolute;
+    z-index: 3;
+    content: '';
+    @include fit('width', 784, 100, 1);
+    @include fit('height', 784, 100, 1);
+    border-radius: 50%;
+    left: rem(-260);
+    top: rem(300);
+    filter: blur(216.648px);
+    background: $blue;
+  }
+  &::after {
+    position: absolute;
+    z-index: 3;
+    content: '';
+    @include fit('width', 440, 100, 1);
+    @include fit('height', 440, 100, 1);
+    border-radius: 50%;
+    left: rem(-150);
+    top: rem(450);
+    background: #0e89f5;
+    filter: blur(177.419px);
+  }
+  &__wrapp {
+    overflow: hidden;
+  }
   &__main {
     @include fit('margin-top', 198, 94, 1);
     display: grid;
@@ -49,7 +76,7 @@
   &__title {
     position: relative;
     pointer-events: none;
-    z-index: 3;
+    z-index: 4;
     font-family: 'Misto';
     font-weight: 400;
     @include fit('font-size', 100, 42, 1);
@@ -85,7 +112,7 @@
   }
   &__btn {
     position: relative;
-    z-index: 3;
+    z-index: 4;
     font-weight: 600;
     background: #D3FE29;
     border-radius: rem(100);
@@ -107,7 +134,7 @@
   }
   &__row {
     position: relative;
-    z-index: 3;
+    z-index: 4;
     display: inline-flex;
     align-items: center;
     gap: rem(24);

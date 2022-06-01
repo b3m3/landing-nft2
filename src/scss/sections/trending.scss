@@ -5,6 +5,8 @@
     @include fit('margin-top', 225, 50, 1);
   }
   &__header {
+    position: relative;
+    z-index: 3;
     display: grid;
     align-items: center;
     grid-template: auto / auto 1fr auto;
@@ -13,8 +15,8 @@
     @include tablet {grid-template: auto auto / auto auto;}
   }
   &__slider {
-    position: relative;
     overflow: visible;
+    z-index: 2;
 
     &::before {
       position: absolute;
