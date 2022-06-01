@@ -781,12 +781,12 @@ body {
     font-size: calc(42px + 58 * ((100vw - 320px) / 960));
   }
 }
-.info-intro__title h2:last-child {
+.info-intro__title h1:last-child {
   display: flex;
   align-items: center;
 }
 @media (max-width: 1024px) {
-  .info-intro__title h2:last-child {
+  .info-intro__title h1:last-child {
     display: block;
   }
 }

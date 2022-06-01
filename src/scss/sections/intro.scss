@@ -59,7 +59,7 @@
     flex: 1 0 auto;
     text-align: right;
 
-    & h2:last-child {
+    & h1:last-child {
       display: flex;
       align-items: center;
       @include laptop {display: block;}
