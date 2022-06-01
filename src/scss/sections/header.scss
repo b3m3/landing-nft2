@@ -1,7 +1,7 @@
 .header {
   &__wrapp {}
   &__main {
-    @include fit('padding-top', 64, 0, 1);
+    @include fit('padding-top', 64, 7, 1);
     display: grid;
     align-items: center;
     gap: rem(20);

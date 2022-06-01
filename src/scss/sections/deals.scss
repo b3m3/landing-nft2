@@ -10,7 +10,10 @@
     top: 0;
     object-fit: cover;
 
-    @include laptop {margin: 0 0 0 rem(-15);}
+    @include laptop {
+      margin: 0 0 0 rem(-15);
+      right: 0;
+    }
   }
   &__info {
     position: absolute;

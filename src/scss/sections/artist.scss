@@ -1,0 +1,66 @@
+.artist {
+  &__main {
+    @include fit('margin-top', 120, 50, 1);
+    display: flex;
+    flex-direction: column;
+    @include fit('gap', 80, 30, 1);
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__body {
+    display: grid;
+    grid-auto-rows: minmax(rem(511), 1fr);
+    gap: rem(24);
+    grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+  }
+}
+
+.body-artist {
+  &__item {
+    position: relative;
+    overflow: hidden;
+    @include pc {
+      &:hover {
+        .body-artist__item-image img {
+          transform: scale(1.045);
+        }
+        .body-artist__item-bottom {
+          border-radius: 25% 25% 0 0;
+        }
+      }
+    }
+  }
+  &__item-image {
+    display: block;
+    height: 100%;
+  }
+  &__item-bottom {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+    padding: rem(24);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: .3s ease;
+  }
+  &__item-avatar {
+    overflow: hidden;
+    width: rem(80);
+    height: rem(80);
+    border-radius: 50%;
+    border: 3px solid #fff;
+  }
+  &__item-subtitle {
+    color: $blue;
+  }
+}
+

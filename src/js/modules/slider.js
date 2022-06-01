@@ -12,7 +12,7 @@ const slider = () => {
     },
     breakpoints: {
       320: {
-        spaceBetween: 15
+        spaceBetween: 10
       },
       768: {
         spaceBetween: 40
@@ -25,12 +25,19 @@ const slider = () => {
     loop: true,
     speed: 600,
     parallax: true,
-    spaceBetween: 24,
     slidesPerView: 'auto',
     navigation: {
       nextEl: '.header-trending__arrows-next',
       prevEl: '.header-trending__arrows-prev'
     },
+    breakpoints: {
+      320: {
+        spaceBetween: 10
+      },
+      768: {
+        spaceBetween: 24
+      },
+    }
   });
 };
 
