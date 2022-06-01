@@ -256,7 +256,7 @@
             <div class="explore__header header-explore">
               <h2 class="header-explore__title title">Explore</h2>
               <div class="header-explore__search">
-                <input class="header-explore__search-input" type="text" name="search">
+                <input class="header-explore__search-input" type="text" name="search" placeholder="Search item">
                 <button class="header-explore__search-btn"><span class="icon-search"></span></button>
               </div>
             </div>
@@ -266,10 +266,12 @@
 
                 <div class="filter-explore__row">
                   <p class="filter-explore__text text">PRICE</p>
-                  <input class="filter-explore__range" type="range" name="range">
+                  <input class="filter-explore__range" type="range" name="range" min="0.000" max="10" step="0.001"
+                    value="0.001">
                   <div class="filter-explore__box">
-                    <p class="filter-explore__label filter-value"><span>0.001</span> ETH</p>
-                    <p class="filter-explore__label">10 ETH</p>
+                    <p class="filter-explore__text filter-explore__text_white text filter-value"><span>0.001</span> ETH
+                    </p>
+                    <p class="filter-explore__text filter-explore__text_white text">10 ETH</p>
                   </div>
                 </div>
 
@@ -291,7 +293,9 @@
                   <input class="filter-explore__input" type="text" placeholder="search by categories">
                 </div>
 
-                <button class="filter-explore__btn filter-explore__btn_apply">Apply</button>
+                <div class="filter-explore__row">
+                  <button class="filter-explore__btn filter-explore__btn_apply">Apply</button>
+                </div>
               </div>
 
               <div class="explore__images images-explore">
@@ -308,6 +312,10 @@
                   <img src="img/02.jpg" alt="image">
                 </a>
               </div>
+            </div>
+
+            <div class="explore__bottom bottom-explore">
+              <button class="bottom-explore__btn btn">Load more</button>
             </div>
           </div>
         </div>

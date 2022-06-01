@@ -13,8 +13,10 @@
   &__body {
     display: grid;
     grid-auto-rows: minmax(rem(511), 1fr);
-    gap: rem(24);
-    grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+    @include fit('gap', 24, 15, 1);
+    grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
+
+    @include mq(rem(966)){grid-auto-rows: minmax(rem(400), 1fr);}
   }
 }
 
