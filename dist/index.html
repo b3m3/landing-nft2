@@ -7,7 +7,7 @@
   <meta name="author" content="b3m3">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.svg">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.min.css?_v=20220601233837">
   <title>NFT2</title>
 </head>
 
@@ -15,33 +15,33 @@
   <div class="app" id="app">
     <!-- header -->
     <header class="header">
-  <div class="header__wrapp">
-    <div class="container">
-      <div class="header__main">
+      <div class="header__wrapp">
+        <div class="container">
+          <div class="header__main">
 
-        <a class="header__logo logo-header" href="#">
-          <span class="icon-logo"></span> NFT
-        </a>
+            <a class="header__logo logo-header" href="#">
+              <span class="icon-logo"></span> NFT
+            </a>
 
-        <nav class="header__menu menu">
-          <ul class="menu__list swap-wrapp">
-            <li class="ab ts tn6"><a class="menu__link" href="#footer">Discover</a></li>
-            <li class="ab ts tn10"><a class="menu__link" href="#header-trending">Collection</a></li>
-            <li class="ab ts tn14"><a class="menu__link" href="#artist">Artist</a></li>
-          </ul>
-        </nav>
+            <nav class="header__menu menu">
+              <ul class="menu__list swap-wrapp">
+                <li class="ab ts tn6"><a class="menu__link" href="#footer">Discover</a></li>
+                <li class="ab ts tn10"><a class="menu__link" href="#header-trending">Collection</a></li>
+                <li class="ab ts tn14"><a class="menu__link" href="#artist">Artist</a></li>
+              </ul>
+            </nav>
 
-        <div class="header__button button-header swap-wrapp">
-          <a class="button-header__btn btn swap-elem" href="#">Connect to wallet</a>
-        </div>
+            <div class="header__button button-header swap-wrapp">
+              <a class="button-header__btn btn swap-elem" href="#">Connect to wallet</a>
+            </div>
 
-        <div class="header__burger burger">
-          <span></span><span></span><span></span>
+            <div class="header__burger burger">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</header>
+    </header>
 
     <!-- main -->
     <main class="main">
@@ -58,9 +58,15 @@
                 <a class="info-intro__btn btn" href="#">Explore</a>
                 <div class="info-intro__row">
                   <div class="info-intro__images">
-                    <img src="img/a_1.jpg" alt="avatar">
-                    <img src="img/a_2.jpg" alt="avatar">
-                    <img src="img/a_3.jpg" alt="avatar">
+                    <picture>
+                      <source srcset="img/a_1.webp" type="image/webp"><img src="img/a_1.jpg" alt="avatar">
+                    </picture>
+                    <picture>
+                      <source srcset="img/a_2.webp" type="image/webp"><img src="img/a_2.jpg" alt="avatar">
+                    </picture>
+                    <picture>
+                      <source srcset="img/a_3.webp" type="image/webp"><img src="img/a_3.jpg" alt="avatar">
+                    </picture>
                   </div>
                   <p class="info-intro__text text">Over 1.000.000 account active <span class="icon-star"></span></p>
                 </div>
@@ -69,7 +75,9 @@
                 <div class="slider-intro__wrapp swiper-wrapper">
                   <div class="slider-intro__item swiper-slide">
                     <a href="#" class="slider-intro__item-img ibga">
-                      <img src="img/01.jpg" alt="img">
+                      <picture>
+                        <source srcset="img/01.webp" type="image/webp"><img src="img/01.jpg" alt="img">
+                      </picture>
                     </a>
                     <div class="slider-intro__item-subtitle subtitle next-slide">
                       Place a bid
@@ -79,7 +87,9 @@
 
                   <div class="slider-intro__item swiper-slide">
                     <a href="#" class="slider-intro__item-img ibga">
-                      <img src="img/02.jpg" alt="img">
+                      <picture>
+                        <source srcset="img/02.webp" type="image/webp"><img src="img/02.jpg" alt="img">
+                      </picture>
                     </a>
                     <div class="slider-intro__item-subtitle subtitle next-slide">
                       Place a bid
@@ -115,7 +125,9 @@
               <div class="slider-trending__wrapp swiper-wrapper">
                 <div class="slider-trending__item swiper-slide">
                   <a class="slider-trending__item-img ibga" href="#">
-                    <img src="img/03.jpg" alt="image">
+                    <picture>
+                      <source srcset="img/03.webp" type="image/webp"><img src="img/03.jpg" alt="image">
+                    </picture>
                   </a>
                   <div class="slider-trending__item-bottom" data-swiper-parallax-opacity="0.1">
                     <h4 class="slider-trending__item-subtitle subtitle" data-swiper-parallax="-100">Green Hero</h4>
@@ -125,7 +137,9 @@
 
                 <div class="slider-trending__item-small swiper-slide">
                   <a class="slider-trending__item-img ibga" href="#">
-                    <img src="img/04.jpg" alt="image">
+                    <picture>
+                      <source srcset="img/04.webp" type="image/webp"><img src="img/04.jpg" alt="image">
+                    </picture>
                   </a>
                   <div class="slider-trending__item-bottom" data-swiper-parallax-opacity="0.1">
                     <h4 class="slider-trending__item-subtitle subtitle" data-swiper-parallax="-100">Illusion</h4>
@@ -135,7 +149,9 @@
 
                 <div class="slider-trending__item swiper-slide">
                   <a class="slider-trending__item-img ibga" href="#">
-                    <img src="img/05.jpg" alt="image">
+                    <picture>
+                      <source srcset="img/05.webp" type="image/webp"><img src="img/05.jpg" alt="image">
+                    </picture>
                   </a>
                   <div class="slider-trending__item-bottom" data-swiper-parallax-opacity="0.1">
                     <h4 class="slider-trending__item-subtitle subtitle" data-swiper-parallax="-100">Green Abstract
@@ -154,7 +170,9 @@
         <div class="container">
           <div class="deals__main">
             <div class="deals__image">
-              <img src="img/fish.jpg" alt="image">
+              <picture>
+                <source srcset="img/fish.webp" type="image/webp"><img src="img/fish.jpg" alt="image">
+              </picture>
             </div>
             <div class="deals__info info-deals ab tor tn14">
               <div class="info-deals__column">
@@ -210,11 +228,15 @@
             <div class="artist__body body-artist">
               <div class="body-artist__item ab ts tn8">
                 <a class="body-artist__item-image ibga" href="#">
-                  <img src="img/top/01.jpg" alt="image">
+                  <picture>
+                    <source srcset="img/top/01.webp" type="image/webp"><img src="img/top/01.jpg" alt="image">
+                  </picture>
                 </a>
                 <div class="body-artist__item-bottom">
                   <div class="body-artist__item-avatar ibga">
-                    <img src="img/a_1.jpg" alt="avatar">
+                    <picture>
+                      <source srcset="img/a_1.webp" type="image/webp"><img src="img/a_1.jpg" alt="avatar">
+                    </picture>
                   </div>
                   <div class="body-artist__item-col">
                     <h3 class="body-artist__item-subtitle subtitle">Groovin</h3>
@@ -225,11 +247,15 @@
 
               <div class="body-artist__item ab ts tn12">
                 <a class="body-artist__item-image ibga" href="#">
-                  <img src="img/top/02.jpg" alt="image">
+                  <picture>
+                    <source srcset="img/top/02.webp" type="image/webp"><img src="img/top/02.jpg" alt="image">
+                  </picture>
                 </a>
                 <div class="body-artist__item-bottom">
                   <div class="body-artist__item-avatar ibga">
-                    <img src="img/a_2.jpg" alt="avatar">
+                    <picture>
+                      <source srcset="img/a_2.webp" type="image/webp"><img src="img/a_2.jpg" alt="avatar">
+                    </picture>
                   </div>
                   <div class="body-artist__item-col">
                     <h3 class="body-artist__item-subtitle subtitle">Luxxur</h3>
@@ -240,11 +266,15 @@
 
               <div class="body-artist__item ab ts tn16">
                 <a class="body-artist__item-image ibga" href="#">
-                  <img src="img/top/03.jpg" alt="image">
+                  <picture>
+                    <source srcset="img/top/03.webp" type="image/webp"><img src="img/top/03.jpg" alt="image">
+                  </picture>
                 </a>
                 <div class="body-artist__item-bottom">
                   <div class="body-artist__item-avatar ibga">
-                    <img src="img/a_3.jpg" alt="avatar">
+                    <picture>
+                      <source srcset="img/a_3.webp" type="image/webp"><img src="img/a_3.jpg" alt="avatar">
+                    </picture>
                   </div>
                   <div class="body-artist__item-col">
                     <h3 class="body-artist__item-subtitle subtitle">Groovin</h3>
@@ -308,16 +338,24 @@
 
               <div class="explore__images images-explore">
                 <a class="images-explore__image ibga ab ts tn10" href="#">
-                  <img src="img/bird.jpg" alt="image">
+                  <picture>
+                    <source srcset="img/bird.webp" type="image/webp"><img src="img/bird.jpg" alt="image">
+                  </picture>
                 </a>
                 <a class="images-explore__image ibga ab ts tn12" href="#">
-                  <img src="img/01.jpg" alt="image">
+                  <picture>
+                    <source srcset="img/01.webp" type="image/webp"><img src="img/01.jpg" alt="image">
+                  </picture>
                 </a>
                 <a class="images-explore__image ibga ab ts tn14" href="#">
-                  <img src="img/face.jpg" alt="image">
+                  <picture>
+                    <source srcset="img/face.webp" type="image/webp"><img src="img/face.jpg" alt="image">
+                  </picture>
                 </a>
                 <a class="images-explore__image ibga ab ts tn16" href="#">
-                  <img src="img/02.jpg" alt="image">
+                  <picture>
+                    <source srcset="img/02.webp" type="image/webp"><img src="img/02.jpg" alt="image">
+                  </picture>
                 </a>
               </div>
             </div>
@@ -347,10 +385,14 @@
 
             <div class="top__images images-top">
               <a class="images-top__img ibga ab tot tn14" href="#">
-                <img src="img/06.jpg" alt="image">
+                <picture>
+                  <source srcset="img/06.webp" type="image/webp"><img src="img/06.jpg" alt="image">
+                </picture>
               </a>
               <a class="images-top__img ibga ab tor tn14" href="#">
-                <img src="img/07.jpg" alt="image">
+                <picture>
+                  <source srcset="img/07.webp" type="image/webp"><img src="img/07.jpg" alt="image">
+                </picture>
               </a>
             </div>
           </div>
@@ -360,45 +402,45 @@
 
     <!-- footer -->
     <footer class="footer" id="footer">
-  <div class="container">
-    <div class="footer__main">
-      <div class="footer__title">
-        <h2 class="ab tor tn14">Discover a rare<br> abstract item around<br> the world</h2>
-      </div>
+      <div class="container">
+        <div class="footer__main">
+          <div class="footer__title">
+            <h2 class="ab tor tn14">Discover a rare<br> abstract item around<br> the world</h2>
+          </div>
 
-      <nav class="footer__menu menu-footer">
-        <h4 class="footer__subtitle">Pages</h4>
-        <ul class="menu-footer__list">
-          <li class="ab tob tn8"><a class="menu-footer__link" href="#">Community</a></li>
-          <li class="ab tob tn10"><a class="menu-footer__link" href="#">Upload</a></li>
-          <li class="ab tob tn12"><a class="menu-footer__link" href="#">How it works</a></li>
-          <li class="ab tob tn14"><a class="menu-footer__link" href="#">Connetct to Wallet</a></li>
-        </ul>
-      </nav>
+          <nav class="footer__menu menu-footer">
+            <h4 class="footer__subtitle">Pages</h4>
+            <ul class="menu-footer__list">
+              <li class="ab tob tn8"><a class="menu-footer__link" href="#">Community</a></li>
+              <li class="ab tob tn10"><a class="menu-footer__link" href="#">Upload</a></li>
+              <li class="ab tob tn12"><a class="menu-footer__link" href="#">How it works</a></li>
+              <li class="ab tob tn14"><a class="menu-footer__link" href="#">Connetct to Wallet</a></li>
+            </ul>
+          </nav>
 
-      <nav class="footer__menu menu-footer">
-        <h4 class="footer__subtitle">Info</h4>
-        <ul class="menu-footer__list">
-          <li class="ab tob tn8"><a class="menu-footer__link" href="#">Download</a></li>
-          <li class="ab tob tn10"><a class="menu-footer__link" href="#">Support</a></li>
-          <li class="ab tob tn12"><a class="menu-footer__link" href="#">Donate</a></li>
-        </ul>
-      </nav>
+          <nav class="footer__menu menu-footer">
+            <h4 class="footer__subtitle">Info</h4>
+            <ul class="menu-footer__list">
+              <li class="ab tob tn8"><a class="menu-footer__link" href="#">Download</a></li>
+              <li class="ab tob tn10"><a class="menu-footer__link" href="#">Support</a></li>
+              <li class="ab tob tn12"><a class="menu-footer__link" href="#">Donate</a></li>
+            </ul>
+          </nav>
 
-      <form class="footer__form form-footer" action="#">
-        <h4 class="footer__subtitle">Joins Newsletter</h4>
-        <p class="form-footer__text">Subscribe our newsletter to get more amazing NFTs item</p>
-        <div class="form-footer__row">
-          <input class="form-footer__input" type="email" name="email" placeholder="Enter Your Email">
-          <button class="form-footer__button" type="submit"></button>
+          <form class="footer__form form-footer" action="#">
+            <h4 class="footer__subtitle">Joins Newsletter</h4>
+            <p class="form-footer__text">Subscribe our newsletter to get more amazing NFTs item</p>
+            <div class="form-footer__row">
+              <input class="form-footer__input" type="email" name="email" placeholder="Enter Your Email">
+              <button class="form-footer__button" type="submit"></button>
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
-  </div>
-</footer>
+      </div>
+    </footer>
   </div>
 
-  <script src="js/app.min.js"></script>
+  <script src="js/app.min.js?_v=20220601233837"></script>
 </body>
 
 </html>
