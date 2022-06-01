@@ -1,0 +1,116 @@
+.top {
+  &__main {
+    @include fit('margin-top', 120, 50, 1);
+    display: grid;
+    grid-template: minmax(rem(673), auto) / minmax(auto, rem(609)) minmax(auto, rem(671));
+
+    @include laptop {
+      gap: rem(30);
+      text-align: center;
+      grid-template: auto minmax(rem(400), 1fr) / 1fr;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    @include fit('gap', 130, 20, 1);
+    margin: 0 rem(-61) 0 0;
+
+    @include laptop {
+      margin: 0;
+    }
+  }
+  &__images {
+    position: relative;
+    display: grid;
+    grid-template: minmax(auto, rem(567)) minmax(auto, rem(105)) / minmax(auto, rem(217)) minmax(auto, rem(454));
+  
+    @include laptop {
+      gap: rem(10);
+      grid-template: 1fr / 1fr 1fr;
+    }
+
+    @include mobile-l {
+      grid-template: 1fr 1fr / 1fr;
+    }
+  }
+}
+
+.info-top {
+  &__title {
+    font-family: 'Maragsa';
+    white-space: nowrap;
+    font-weight: 400;
+    @include fit('font-size', 100, 42, 1);
+    line-height: 130.4%;
+    display: flex;
+    flex-direction: column;
+    @include fit('gap', 24, 0, 1);
+  }
+  &__row {
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      @include fit('gap', 24, 10, 1);
+    }
+    &:last-child {
+      display: flex;
+      flex-wrap: wrap;
+      @include fit('gap', 32, 15, 1);
+
+      @include laptop {
+        justify-content: center;
+      }
+
+      @include tablet {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @include mobile-l {
+        align-items: unset;
+      }
+    }
+  }
+  &__btn {
+    padding: rem(16) rem(24);
+  }
+}
+
+.images-top {
+  &__img {
+    min-width: rem(300);
+
+    &:first-child {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+
+      @include laptop {
+        grid-row: unset;
+        grid-column: unset;
+      }
+    }
+    &:last-child {
+      margin: rem(-240) rem(-128) 0 0;
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+
+      @include laptop {
+        margin: 0;
+        grid-row: unset;
+        grid-column: unset;
+      }
+    }
+
+    @include pc {
+      &:hover {
+        animation: rotate-img 1s linear;
+        transition-delay: 0s;
+      }
+    }
+
+    @include laptop {
+      min-width: unset;
+    }
+  }
+}

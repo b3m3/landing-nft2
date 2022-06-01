@@ -91,12 +91,17 @@
     border: none;
     padding: rem(14) rem(69);
     color: $bg;
+    
 
     @include pc {
       &:hover {
         border: none;
         color: #fff;
       }
+    }
+
+    @include mobile-l {
+      width: 100%;
     }
   }
   &__row {
