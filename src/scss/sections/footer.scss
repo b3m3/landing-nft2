@@ -1,5 +1,6 @@
 .footer {
   &__main {
+    overflow: hidden;
     @include fit('padding-top', 160, 50, 1);
     @include fit('padding-bottom', 154, 50, 1);
     display: grid;

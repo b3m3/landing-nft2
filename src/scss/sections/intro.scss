@@ -1,5 +1,6 @@
 .intro {
   overflow: hidden;
+  
   &__main {
     @include fit('margin-top', 198, 94, 1);
     display: grid;
@@ -48,7 +49,7 @@
   &__title {
     position: relative;
     pointer-events: none;
-    z-index: 5;
+    z-index: 3;
     font-family: 'Misto';
     font-weight: 400;
     @include fit('font-size', 100, 42, 1);
@@ -84,7 +85,7 @@
   }
   &__btn {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     font-weight: 600;
     background: #D3FE29;
     border-radius: rem(100);
@@ -106,7 +107,7 @@
   }
   &__row {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     display: inline-flex;
     align-items: center;
     gap: rem(24);

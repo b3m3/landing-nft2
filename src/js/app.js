@@ -1,10 +1,11 @@
 import webp from './lib/webp.js';
 import swiper from './modules/slider.js';
 import burger from './modules/burger.js';
+import fixedHeader from './modules/fixed-header.js';
 import moveElement from './modules/move-element.js';
 import timer from './modules/timer.js';
 import exploreFilter from './modules/explore-filter.js';
-import fixedHeader from './modules/fixed-header.js';
+import scrollEvents from './modules/scroll-events.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
@@ -16,4 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   moveElement(768, '.swap-wrapp', '.swap-elem');
   timer();
   exploreFilter();
+  scrollEvents();
 });
