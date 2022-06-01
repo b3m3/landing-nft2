@@ -65,6 +65,7 @@
 }
 
 .view-all {
+  display: inline-block;
   @include pc {
     &:hover {
       .view-all__name {
