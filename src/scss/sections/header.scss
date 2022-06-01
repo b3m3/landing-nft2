@@ -1,5 +1,20 @@
 .header {
-  &__wrapp {}
+  &.fixed {
+    .header__wrapp {
+      position: fixed;
+      background-color: rgba(0, 90, 170, .68);
+      animation: header-slow 1s ease;
+    }
+    .header__main {
+      padding-top: rem(7);
+      padding-bottom: rem(7);
+    }
+  }
+  &__wrapp {
+    position: absolute;
+    z-index: 40;
+    width: 100%;
+  }
   &__main {
     @include fit('padding-top', 64, 7, 1);
     display: grid;
@@ -55,7 +70,7 @@
     color: #fff;
     transition: .3s ease;
     
-    @media(min-width: rem(768)) {
+    @include pc {
       &:hover {
         color: $blue;
       }

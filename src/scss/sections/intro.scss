@@ -1,7 +1,7 @@
 .intro {
   overflow: hidden;
   &__main {
-    @include fit('padding-top', 90, 50, 1);
+    @include fit('margin-top', 198, 94, 1);
     display: grid;
     grid-row-gap: rem(30);
     grid-template: minmax(rem(627), auto) / auto minmax(rem(410), auto);
@@ -168,6 +168,7 @@
     padding: 0 rem(16);
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     & span {
       transition: .3s ease-out;

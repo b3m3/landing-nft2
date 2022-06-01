@@ -24,6 +24,7 @@
     grid-template: minmax(rem(223), auto) / minmax(auto, rem(577)) minmax(auto, rem(223));
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     @include tablet {
       grid-template: auto auto / 1fr;

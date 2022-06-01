@@ -19,6 +19,15 @@
   }
 }
 
+@keyframes header-slow {
+  from {
+    transform: translateY(rem(-50));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 .ibg {
   width: 100%;
   height: 100%;
