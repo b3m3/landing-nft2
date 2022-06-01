@@ -106,6 +106,14 @@
     &_white {
       color: #fff;
     }
+
+    &.range-value  {
+      display: flex;
+      gap: rem(5);
+      & span {
+        @include fit('width', 60, 45, 1);
+      }
+    }
   }
   &__range {
     -webkit-appearance: none;
@@ -141,6 +149,10 @@
     line-height: 130.4%;
     color: #fff;
     transition: .3s ease;
+
+    &.active {
+      background-color: $blue;
+    }
 
     &_apply {
       background: $blue;

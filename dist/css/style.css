@@ -1449,6 +1449,18 @@ body {
 .filter-explore__text_white {
   color: #fff;
 }
+.filter-explore__text.range-value {
+  display: flex;
+  gap: 0.3125rem;
+}
+.filter-explore__text.range-value span {
+  width: 60px;
+}
+@media (max-width: 1280px) {
+  .filter-explore__text.range-value span {
+    width: calc(45px + 15 * ((100vw - 320px) / 960));
+  }
+}
 .filter-explore__range {
   -webkit-appearance: none;
   width: 100%;
@@ -1490,6 +1502,9 @@ body {
   line-height: 130.4%;
   color: #fff;
   transition: 0.3s ease;
+}
+.filter-explore__btn.active {
+  background-color: #005AAA;
 }
 .filter-explore__btn_apply {
   background: #005AAA;
