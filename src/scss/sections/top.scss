@@ -104,7 +104,7 @@
 
     @include pc {
       &:hover {
-        animation: rotate-img 1s linear;
+        animation: rotate-img .7s linear;
         transition-delay: 0s;
       }
     }
