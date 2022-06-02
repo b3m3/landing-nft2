@@ -4,7 +4,7 @@ const timer = () => {
   const second = document.querySelector('.second');
 
   const calcTime = () => {
-    const finalDate = new Date("06.06.2024");
+    const finalDate = new Date("2024/06/06");
     const currentDate = new Date();
   
     const diff = finalDate - currentDate;
