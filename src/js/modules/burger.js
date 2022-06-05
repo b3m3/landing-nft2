@@ -17,9 +17,11 @@ const menuBurger = () => {
     switch (e.target.className) {
       case 'menu__link':
         menu.classList.remove('show-menu');
+        document.body.style.overflow = '';
         break;
       case 'button-header__btn btn swap-elem':
         menu.classList.remove('show-menu');
+        document.body.style.overflow = '';
         break;
     }
   });
